@@ -1,0 +1,6 @@
+framework module Pods_Tor_ConnectTests {
+  umbrella header "Pods-Tor-ConnectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0493DD45A7FBE652591EF39B /* Pods_Tor_Connect_Tor_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB9167C015D7F0AB70CB311 /* Pods_Tor_Connect_Tor_ConnectUITests.framework */; };
+		5987F7BE2B59A389005185A3 /* TorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987F7BD2B59A389005185A3 /* TorClient.swift */; };
+		59B6C9052B59A24D000DDBDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9042B59A24D000DDBDE /* AppDelegate.swift */; };
+		59B6C9072B59A24D000DDBDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9062B59A24D000DDBDE /* ViewController.swift */; };
+		59B6C90A2B59A24D000DDBDE /* Tor_Connect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9082B59A24D000DDBDE /* Tor_Connect.xcdatamodeld */; };
+		59B6C90C2B59A24F000DDBDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B6C90B2B59A24F000DDBDE /* Assets.xcassets */; };
+		59B6C90F2B59A24F000DDBDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B6C90D2B59A24F000DDBDE /* Main.storyboard */; };
+		59B6C91A2B59A24F000DDBDE /* Tor_ConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9192B59A24F000DDBDE /* Tor_ConnectTests.swift */; };
+		59B6C9242B59A24F000DDBDE /* Tor_ConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9232B59A24F000DDBDE /* Tor_ConnectUITests.swift */; };
+		59B6C9262B59A24F000DDBDE /* Tor_ConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9252B59A24F000DDBDE /* Tor_ConnectUITestsLaunchTests.swift */; };
+		6979D8EDD0381803873387B6 /* Pods_Tor_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF32ADFEFBAF34A56AD3F01D /* Pods_Tor_ConnectTests.framework */; };
+		8547E6A5D194CD70E632E13E /* Pods_Tor_Connect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE202233F1643EF2A14D671 /* Pods_Tor_Connect.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59B6C9162B59A24F000DDBDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59B6C8F92B59A24D000DDBDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59B6C9002B59A24D000DDBDE;
+			remoteInfo = "Tor-Connect";
+		};
+		59B6C9202B59A24F000DDBDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59B6C8F92B59A24D000DDBDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59B6C9002B59A24D000DDBDE;
+			remoteInfo = "Tor-Connect";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ACE6C99C69D538497C952FE /* Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-Tor-Connect-Tor-ConnectUITests/Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0DB9167C015D7F0AB70CB311 /* Pods_Tor_Connect_Tor_ConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tor_Connect_Tor_ConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5987F7BD2B59A389005185A3 /* TorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorClient.swift; sourceTree = "<group>"; };
+		59B6C9012B59A24D000DDBDE /* Tor-Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tor-Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59B6C9042B59A24D000DDBDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59B6C9062B59A24D000DDBDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59B6C9092B59A24D000DDBDE /* Tor_Connect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tor_Connect.xcdatamodel; sourceTree = "<group>"; };
+		59B6C90B2B59A24F000DDBDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59B6C90E2B59A24F000DDBDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59B6C9102B59A24F000DDBDE /* Tor_Connect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tor_Connect.entitlements; sourceTree = "<group>"; };
+		59B6C9152B59A24F000DDBDE /* Tor-ConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tor-ConnectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59B6C9192B59A24F000DDBDE /* Tor_ConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tor_ConnectTests.swift; sourceTree = "<group>"; };
+		59B6C91F2B59A24F000DDBDE /* Tor-ConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tor-ConnectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59B6C9232B59A24F000DDBDE /* Tor_ConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tor_ConnectUITests.swift; sourceTree = "<group>"; };
+		59B6C9252B59A24F000DDBDE /* Tor_ConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tor_ConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		64A0F8FB28C5CC0328F04028 /* Pods-Tor-ConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-ConnectTests.release.xcconfig"; path = "Target Support Files/Pods-Tor-ConnectTests/Pods-Tor-ConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		6688CE0DB7ECAAD5E0A081AD /* Pods-Tor-Connect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-Connect.debug.xcconfig"; path = "Target Support Files/Pods-Tor-Connect/Pods-Tor-Connect.debug.xcconfig"; sourceTree = "<group>"; };
+		7AE202233F1643EF2A14D671 /* Pods_Tor_Connect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tor_Connect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B028266C97F25B20F2631D0 /* Pods-Tor-Connect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-Connect.release.xcconfig"; path = "Target Support Files/Pods-Tor-Connect/Pods-Tor-Connect.release.xcconfig"; sourceTree = "<group>"; };
+		D8014E4DA6B26F566096DAEC /* Pods-Tor-Connect-Tor-ConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-Connect-Tor-ConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tor-Connect-Tor-ConnectUITests/Pods-Tor-Connect-Tor-ConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF32ADFEFBAF34A56AD3F01D /* Pods_Tor_ConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tor_ConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9B6CA051699971B49624BBD /* Pods-Tor-ConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-ConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-Tor-ConnectTests/Pods-Tor-ConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59B6C8FE2B59A24D000DDBDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8547E6A5D194CD70E632E13E /* Pods_Tor_Connect.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B6C9122B59A24F000DDBDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6979D8EDD0381803873387B6 /* Pods_Tor_ConnectTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B6C91C2B59A24F000DDBDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0493DD45A7FBE652591EF39B /* Pods_Tor_Connect_Tor_ConnectUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59B6C8F82B59A24D000DDBDE = {
+			isa = PBXGroup;
+			children = (
+				59B6C9032B59A24D000DDBDE /* Tor-Connect */,
+				59B6C9182B59A24F000DDBDE /* Tor-ConnectTests */,
+				59B6C9222B59A24F000DDBDE /* Tor-ConnectUITests */,
+				59B6C9022B59A24D000DDBDE /* Products */,
+				FECD90DA499FBC40C8F126DE /* Pods */,
+				F9DA9E8C2FF3101A5F348AA9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		59B6C9022B59A24D000DDBDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59B6C9012B59A24D000DDBDE /* Tor-Connect.app */,
+				59B6C9152B59A24F000DDBDE /* Tor-ConnectTests.xctest */,
+				59B6C91F2B59A24F000DDBDE /* Tor-ConnectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59B6C9032B59A24D000DDBDE /* Tor-Connect */ = {
+			isa = PBXGroup;
+			children = (
+				59B6C9042B59A24D000DDBDE /* AppDelegate.swift */,
+				59B6C9062B59A24D000DDBDE /* ViewController.swift */,
+				59B6C90B2B59A24F000DDBDE /* Assets.xcassets */,
+				59B6C90D2B59A24F000DDBDE /* Main.storyboard */,
+				59B6C9102B59A24F000DDBDE /* Tor_Connect.entitlements */,
+				59B6C9082B59A24D000DDBDE /* Tor_Connect.xcdatamodeld */,
+				5987F7BD2B59A389005185A3 /* TorClient.swift */,
+			);
+			path = "Tor-Connect";
+			sourceTree = "<group>";
+		};
+		59B6C9182B59A24F000DDBDE /* Tor-ConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				59B6C9192B59A24F000DDBDE /* Tor_ConnectTests.swift */,
+			);
+			path = "Tor-ConnectTests";
+			sourceTree = "<group>";
+		};
+		59B6C9222B59A24F000DDBDE /* Tor-ConnectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59B6C9232B59A24F000DDBDE /* Tor_ConnectUITests.swift */,
+				59B6C9252B59A24F000DDBDE /* Tor_ConnectUITestsLaunchTests.swift */,
+			);
+			path = "Tor-ConnectUITests";
+			sourceTree = "<group>";
+		};
+		F9DA9E8C2FF3101A5F348AA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AE202233F1643EF2A14D671 /* Pods_Tor_Connect.framework */,
+				0DB9167C015D7F0AB70CB311 /* Pods_Tor_Connect_Tor_ConnectUITests.framework */,
+				EF32ADFEFBAF34A56AD3F01D /* Pods_Tor_ConnectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FECD90DA499FBC40C8F126DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6688CE0DB7ECAAD5E0A081AD /* Pods-Tor-Connect.debug.xcconfig */,
+				8B028266C97F25B20F2631D0 /* Pods-Tor-Connect.release.xcconfig */,
+				D8014E4DA6B26F566096DAEC /* Pods-Tor-Connect-Tor-ConnectUITests.debug.xcconfig */,
+				0ACE6C99C69D538497C952FE /* Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig */,
+				F9B6CA051699971B49624BBD /* Pods-Tor-ConnectTests.debug.xcconfig */,
+				64A0F8FB28C5CC0328F04028 /* Pods-Tor-ConnectTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59B6C9002B59A24D000DDBDE /* Tor-Connect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59B6C9292B59A24F000DDBDE /* Build configuration list for PBXNativeTarget "Tor-Connect" */;
+			buildPhases = (
+				42EDC3472ACCABBC3253F9B5 /* [CP] Check Pods Manifest.lock */,
+				59B6C8FD2B59A24D000DDBDE /* Sources */,
+				59B6C8FE2B59A24D000DDBDE /* Frameworks */,
+				59B6C8FF2B59A24D000DDBDE /* Resources */,
+				B51492D83306847834735168 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tor-Connect";
+			productName = "Tor-Connect";
+			productReference = 59B6C9012B59A24D000DDBDE /* Tor-Connect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59B6C9142B59A24F000DDBDE /* Tor-ConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59B6C92C2B59A24F000DDBDE /* Build configuration list for PBXNativeTarget "Tor-ConnectTests" */;
+			buildPhases = (
+				77934925F326C00AF7FAE4E3 /* [CP] Check Pods Manifest.lock */,
+				59B6C9112B59A24F000DDBDE /* Sources */,
+				59B6C9122B59A24F000DDBDE /* Frameworks */,
+				59B6C9132B59A24F000DDBDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59B6C9172B59A24F000DDBDE /* PBXTargetDependency */,
+			);
+			name = "Tor-ConnectTests";
+			productName = "Tor-ConnectTests";
+			productReference = 59B6C9152B59A24F000DDBDE /* Tor-ConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59B6C91E2B59A24F000DDBDE /* Tor-ConnectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59B6C92F2B59A24F000DDBDE /* Build configuration list for PBXNativeTarget "Tor-ConnectUITests" */;
+			buildPhases = (
+				A3DAA03BB3635D175E49FA24 /* [CP] Check Pods Manifest.lock */,
+				59B6C91B2B59A24F000DDBDE /* Sources */,
+				59B6C91C2B59A24F000DDBDE /* Frameworks */,
+				59B6C91D2B59A24F000DDBDE /* Resources */,
+				2478BE27CC0306A282E56D41 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59B6C9212B59A24F000DDBDE /* PBXTargetDependency */,
+			);
+			name = "Tor-ConnectUITests";
+			productName = "Tor-ConnectUITests";
+			productReference = 59B6C91F2B59A24F000DDBDE /* Tor-ConnectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59B6C8F92B59A24D000DDBDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					59B6C9002B59A24D000DDBDE = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					59B6C9142B59A24F000DDBDE = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 59B6C9002B59A24D000DDBDE;
+					};
+					59B6C91E2B59A24F000DDBDE = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 59B6C9002B59A24D000DDBDE;
+					};
+				};
+			};
+			buildConfigurationList = 59B6C8FC2B59A24D000DDBDE /* Build configuration list for PBXProject "Tor-Connect" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59B6C8F82B59A24D000DDBDE;
+			productRefGroup = 59B6C9022B59A24D000DDBDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59B6C9002B59A24D000DDBDE /* Tor-Connect */,
+				59B6C9142B59A24F000DDBDE /* Tor-ConnectTests */,
+				59B6C91E2B59A24F000DDBDE /* Tor-ConnectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59B6C8FF2B59A24D000DDBDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B6C90C2B59A24F000DDBDE /* Assets.xcassets in Resources */,
+				59B6C90F2B59A24F000DDBDE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B6C9132B59A24F000DDBDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B6C91D2B59A24F000DDBDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2478BE27CC0306A282E56D41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tor-Connect-Tor-ConnectUITests/Pods-Tor-Connect-Tor-ConnectUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tor-Connect-Tor-ConnectUITests/Pods-Tor-Connect-Tor-ConnectUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tor-Connect-Tor-ConnectUITests/Pods-Tor-Connect-Tor-ConnectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42EDC3472ACCABBC3253F9B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tor-Connect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77934925F326C00AF7FAE4E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tor-ConnectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3DAA03BB3635D175E49FA24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tor-Connect-Tor-ConnectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B51492D83306847834735168 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tor-Connect/Pods-Tor-Connect-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tor-Connect/Pods-Tor-Connect-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tor-Connect/Pods-Tor-Connect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59B6C8FD2B59A24D000DDBDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B6C9072B59A24D000DDBDE /* ViewController.swift in Sources */,
+				59B6C9052B59A24D000DDBDE /* AppDelegate.swift in Sources */,
+				5987F7BE2B59A389005185A3 /* TorClient.swift in Sources */,
+				59B6C90A2B59A24D000DDBDE /* Tor_Connect.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B6C9112B59A24F000DDBDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B6C91A2B59A24F000DDBDE /* Tor_ConnectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B6C91B2B59A24F000DDBDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59B6C9242B59A24F000DDBDE /* Tor_ConnectUITests.swift in Sources */,
+				59B6C9262B59A24F000DDBDE /* Tor_ConnectUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59B6C9172B59A24F000DDBDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59B6C9002B59A24D000DDBDE /* Tor-Connect */;
+			targetProxy = 59B6C9162B59A24F000DDBDE /* PBXContainerItemProxy */;
+		};
+		59B6C9212B59A24F000DDBDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59B6C9002B59A24D000DDBDE /* Tor-Connect */;
+			targetProxy = 59B6C9202B59A24F000DDBDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59B6C90D2B59A24F000DDBDE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59B6C90E2B59A24F000DDBDE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59B6C9272B59A24F000DDBDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59B6C9282B59A24F000DDBDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		59B6C92A2B59A24F000DDBDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6688CE0DB7ECAAD5E0A081AD /* Pods-Tor-Connect.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Tor-Connect/Tor_Connect.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JHDU5M9KD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dentonllc.Tor-Connect";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		59B6C92B2B59A24F000DDBDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B028266C97F25B20F2631D0 /* Pods-Tor-Connect.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Tor-Connect/Tor_Connect.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JHDU5M9KD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dentonllc.Tor-Connect";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		59B6C92D2B59A24F000DDBDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9B6CA051699971B49624BBD /* Pods-Tor-ConnectTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JHDU5M9KD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dentonllc.Tor-ConnectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tor-Connect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tor-Connect";
+			};
+			name = Debug;
+		};
+		59B6C92E2B59A24F000DDBDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A0F8FB28C5CC0328F04028 /* Pods-Tor-ConnectTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JHDU5M9KD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dentonllc.Tor-ConnectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tor-Connect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tor-Connect";
+			};
+			name = Release;
+		};
+		59B6C9302B59A24F000DDBDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8014E4DA6B26F566096DAEC /* Pods-Tor-Connect-Tor-ConnectUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JHDU5M9KD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dentonllc.Tor-ConnectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Tor-Connect";
+			};
+			name = Debug;
+		};
+		59B6C9312B59A24F000DDBDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ACE6C99C69D538497C952FE /* Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JHDU5M9KD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dentonllc.Tor-ConnectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Tor-Connect";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59B6C8FC2B59A24D000DDBDE /* Build configuration list for PBXProject "Tor-Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B6C9272B59A24F000DDBDE /* Debug */,
+				59B6C9282B59A24F000DDBDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59B6C9292B59A24F000DDBDE /* Build configuration list for PBXNativeTarget "Tor-Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B6C92A2B59A24F000DDBDE /* Debug */,
+				59B6C92B2B59A24F000DDBDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59B6C92C2B59A24F000DDBDE /* Build configuration list for PBXNativeTarget "Tor-ConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B6C92D2B59A24F000DDBDE /* Debug */,
+				59B6C92E2B59A24F000DDBDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59B6C92F2B59A24F000DDBDE /* Build configuration list for PBXNativeTarget "Tor-ConnectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B6C9302B59A24F000DDBDE /* Debug */,
+				59B6C9312B59A24F000DDBDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59B6C9082B59A24D000DDBDE /* Tor_Connect.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59B6C9092B59A24D000DDBDE /* Tor_Connect.xcdatamodel */,
+			);
+			currentVersion = 59B6C9092B59A24D000DDBDE /* Tor_Connect.xcdatamodel */;
+			path = Tor_Connect.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 59B6C8F92B59A24D000DDBDE /* Project object */;
+}
