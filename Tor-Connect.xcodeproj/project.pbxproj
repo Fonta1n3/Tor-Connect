@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0493DD45A7FBE652591EF39B /* Pods_Tor_Connect_Tor_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB9167C015D7F0AB70CB311 /* Pods_Tor_Connect_Tor_ConnectUITests.framework */; };
+		59723E4C2B5AE4AC006CF78A /* Torrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59723E4B2B5AE4AC006CF78A /* Torrc.swift */; };
 		5987F7BE2B59A389005185A3 /* TorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987F7BD2B59A389005185A3 /* TorClient.swift */; };
 		59B6C9052B59A24D000DDBDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9042B59A24D000DDBDE /* AppDelegate.swift */; };
 		59B6C9072B59A24D000DDBDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9062B59A24D000DDBDE /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		0ACE6C99C69D538497C952FE /* Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-Tor-Connect-Tor-ConnectUITests/Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0DB9167C015D7F0AB70CB311 /* Pods_Tor_Connect_Tor_ConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tor_Connect_Tor_ConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59723E4B2B5AE4AC006CF78A /* Torrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Torrc.swift; sourceTree = "<group>"; };
 		5987F7BD2B59A389005185A3 /* TorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorClient.swift; sourceTree = "<group>"; };
 		59B6C9012B59A24D000DDBDE /* Tor-Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tor-Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B6C9042B59A24D000DDBDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		59B6C9032B59A24D000DDBDE /* Tor-Connect */ = {
 			isa = PBXGroup;
 			children = (
+				59723E4B2B5AE4AC006CF78A /* Torrc.swift */,
 				59B6C9042B59A24D000DDBDE /* AppDelegate.swift */,
 				59B6C9062B59A24D000DDBDE /* ViewController.swift */,
 				59B6C90B2B59A24F000DDBDE /* Assets.xcassets */,
@@ -409,6 +412,7 @@
 				59B6C9052B59A24D000DDBDE /* AppDelegate.swift in Sources */,
 				5987F7BE2B59A389005185A3 /* TorClient.swift in Sources */,
 				59B6C90A2B59A24D000DDBDE /* Tor_Connect.xcdatamodeld in Sources */,
+				59723E4C2B5AE4AC006CF78A /* Torrc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
