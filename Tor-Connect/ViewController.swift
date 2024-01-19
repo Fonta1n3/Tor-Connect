@@ -33,7 +33,6 @@ class ViewController: NSViewController {
 
 extension ViewController: OnionManagerDelegate {
     func torConnProgress(_ progress: Int) {
-        print("progress: \(progress)")
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             statusLabel.stringValue = "Bootstrapping \(progress)% complete."
@@ -41,7 +40,6 @@ extension ViewController: OnionManagerDelegate {
     }
     
     func torConnFinished() {
-        print("tor connection finished")
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             switch torMgr?.state {
@@ -58,11 +56,11 @@ extension ViewController: OnionManagerDelegate {
                 statusLabel.stringValue = "No status."
             }
         }
+        print("hostname: \(torMgr?.hostnames())")
         
     }
     
     func torConnDifficulties() {
-        print("tor connection difficulties")
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             statusLabel.stringValue = "Tor connection difficulties..."
