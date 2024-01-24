@@ -100,6 +100,7 @@
 		59B6C8F82B59A24D000DDBDE = {
 			isa = PBXGroup;
 			children = (
+				0A53716C2B618FB500D82B12 /* README.md */,
 				59B6C9032B59A24D000DDBDE /* Tor-Connect */,
 				59B6C9182B59A24F000DDBDE /* Tor-ConnectTests */,
 				59B6C9222B59A24F000DDBDE /* Tor-ConnectUITests */,
@@ -131,7 +132,6 @@
 				59B6C9082B59A24D000DDBDE /* Tor_Connect.xcdatamodeld */,
 				5987F7BD2B59A389005185A3 /* TorClient.swift */,
 				0A5371682B60320D00D82B12 /* HiddenServices.swift */,
-				0A53716C2B618FB500D82B12 /* README.md */,
 			);
 			path = "Tor-Connect";
 			sourceTree = "<group>";
