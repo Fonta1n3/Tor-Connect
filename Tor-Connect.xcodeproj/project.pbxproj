@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0493DD45A7FBE652591EF39B /* Pods_Tor_Connect_Tor_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB9167C015D7F0AB70CB311 /* Pods_Tor_Connect_Tor_ConnectUITests.framework */; };
+		0A5371692B60320D00D82B12 /* HiddenServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5371682B60320D00D82B12 /* HiddenServices.swift */; };
 		59723E4C2B5AE4AC006CF78A /* Torrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59723E4B2B5AE4AC006CF78A /* Torrc.swift */; };
 		5987F7BE2B59A389005185A3 /* TorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5987F7BD2B59A389005185A3 /* TorClient.swift */; };
 		59B6C9052B59A24D000DDBDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B6C9042B59A24D000DDBDE /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A5371682B60320D00D82B12 /* HiddenServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenServices.swift; sourceTree = "<group>"; };
 		0ACE6C99C69D538497C952FE /* Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-Tor-Connect-Tor-ConnectUITests/Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0DB9167C015D7F0AB70CB311 /* Pods_Tor_Connect_Tor_ConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tor_Connect_Tor_ConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59723E4B2B5AE4AC006CF78A /* Torrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Torrc.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				59B6C9102B59A24F000DDBDE /* Tor_Connect.entitlements */,
 				59B6C9082B59A24D000DDBDE /* Tor_Connect.xcdatamodeld */,
 				5987F7BD2B59A389005185A3 /* TorClient.swift */,
+				0A5371682B60320D00D82B12 /* HiddenServices.swift */,
 			);
 			path = "Tor-Connect";
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B6C9072B59A24D000DDBDE /* ViewController.swift in Sources */,
+				0A5371692B60320D00D82B12 /* HiddenServices.swift in Sources */,
 				59B6C9052B59A24D000DDBDE /* AppDelegate.swift in Sources */,
 				5987F7BE2B59A389005185A3 /* TorClient.swift in Sources */,
 				59B6C90A2B59A24D000DDBDE /* Tor_Connect.xcdatamodeld in Sources */,

@@ -45,9 +45,8 @@ class TorClient: NSObject, URLSessionDelegate {
     func start(delegate: OnionManagerDelegate?) {
         weak var weakDelegate = delegate
         state = .started
-        
-        let proxyPort = 19057
-        let dnsPort = 12348
+        let proxyPort = findFreePort()
+        let dnsPort = findFreePort()
         
         sessionConfiguration.connectionProxyDictionary = [kCFProxyTypeKey: kCFProxyTypeSOCKS,
                                           kCFStreamPropertySOCKSProxyHost: "localhost",
@@ -57,7 +56,6 @@ class TorClient: NSObject, URLSessionDelegate {
         
         addTorrc()
         createTorDirectory()
-        authDirPath = createAuthDirectory()
         
         
         self.thread = nil
@@ -67,7 +65,6 @@ class TorClient: NSObject, URLSessionDelegate {
             "AutomapHostsOnResolve": "1",
             "SocksPort": "\(proxyPort) OnionTrafficOnly",
             "AvoidDiskWrites": "1",
-            "ClientOnionAuthDir": "\(self.authDirPath)",
             "LearnCircuitBuildTimeout": "1",
             "NumEntryGuards": "8",
             "SafeSocks": "1",
@@ -154,6 +151,73 @@ class TorClient: NSObject, URLSessionDelegate {
     }
     
     
+    private func findFreePort() -> UInt16 {
+        var port: UInt16 = 8000;
+
+        let socketFD = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+        if socketFD == -1 {
+          //print("Error creating socket: \(errno)")
+          return port;
+        }
+
+        var hints = addrinfo(
+          ai_flags: AI_PASSIVE,
+          ai_family: AF_INET,
+          ai_socktype: SOCK_STREAM,
+          ai_protocol: 0,
+          ai_addrlen: 0,
+          ai_canonname: nil,
+          ai_addr: nil,
+          ai_next: nil
+        );
+
+        var addressInfo: UnsafeMutablePointer<addrinfo>? = nil;
+        var result = getaddrinfo(nil, "0", &hints, &addressInfo);
+        if result != 0 {
+          //print("Error getting address info: \(errno)")
+          close(socketFD);
+
+          return port;
+        }
+
+        result = Darwin.bind(socketFD, addressInfo!.pointee.ai_addr, socklen_t(addressInfo!.pointee.ai_addrlen));
+        if result == -1 {
+          //print("Error binding socket to an address: \(errno)")
+          close(socketFD);
+
+          return port;
+        }
+
+        result = Darwin.listen(socketFD, 1);
+        if result == -1 {
+          //print("Error setting socket to listen: \(errno)")
+          close(socketFD);
+
+          return port;
+        }
+
+        var addr_in = sockaddr_in();
+        addr_in.sin_len = UInt8(MemoryLayout.size(ofValue: addr_in));
+        addr_in.sin_family = sa_family_t(AF_INET);
+
+        var len = socklen_t(addr_in.sin_len);
+        result = withUnsafeMutablePointer(to: &addr_in, {
+          $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
+            return Darwin.getsockname(socketFD, $0, &len);
+          }
+        });
+
+        if result == 0 {
+          port = addr_in.sin_port;
+        }
+
+        Darwin.shutdown(socketFD, SHUT_RDWR);
+        close(socketFD);
+
+        return port;
+    }
+    
+    
     func resign() {
         controller?.disconnect()
         controller = nil
@@ -208,45 +272,26 @@ class TorClient: NSObject, URLSessionDelegate {
         
     }
     
-    func hostnames() -> String? {
-        // MARK - WIP!
-        let jmHost = "\(torPath())/host/joinmarket/hostname"
+    func hostnames() -> [String]? {
+        //let jmHost = "\(torPath())/host/joinmarket/hostname"
         let btcMain = "\(torPath())/host/bitcoin/rpc/main/hostname"
         let btcTest = "\(torPath())/host/bitcoin/rpc/test/hostname"
         let btcRegtest = "\(torPath())/host/bitcoin/rpc/regtest/hostname"
         let btcSignet = "\(torPath())/host/bitcoin/rpc/signet/hostname"
         
-        let hosts = [jmHost, btcMain, btcTest, btcRegtest, btcSignet]
+        let hosts = [btcMain, btcTest, btcSignet, btcRegtest]
+        var hostnames: [String] = []
         
-//        for host in hosts {
-//            let path = URL(fileURLWithPath: host)
-//            print(try? String(contentsOf: path, encoding: .utf8))
-//            
-//        }
-        
-        let path = URL(fileURLWithPath: btcMain)
-        return try? String(contentsOf: path, encoding: .utf8)
-        
-        
-    }
-    
-    private func createAuthDirectory() -> String {
-        // Create tor v3 auth directory if it does not yet exist
-        let authPath = URL(fileURLWithPath: self.torPath(), isDirectory: true).appendingPathComponent("onion_auth", isDirectory: true).path
-        
-        do {
-            try FileManager.default.createDirectory(atPath: authPath,
-                                                    withIntermediateDirectories: true,
-                                                    attributes: [FileAttributeKey.posixPermissions: 0o700])
-        } catch {
-            print("Auth directory previously created.")
+        for host in hosts {
+            let path = URL(fileURLWithPath: host)
+            guard let hs = try? String(contentsOf: path, encoding: .utf8) else { return nil }
+            let trimmed = hs.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+
+            hostnames.append(trimmed)
         }
         
-        return authPath
+        return hostnames
     }
     
-    
-    func turnedOff() -> Bool {
-        return false
-    }
+
 }
