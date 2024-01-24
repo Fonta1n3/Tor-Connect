@@ -1,11 +1,15 @@
-#  Tor-Connect
+#  Tor-Connect Alpha
 
 Tor-Connect is a simple app with which runs the latest stable release of Tor.
 The point of Tor-Connect is to make running Tor on your Mac and creating/managing 
-hidden services for Bitcoin Core easy for anyone.
+hidden services for Bitcoin Core easy for anyone. 
+
+
+## Dependencies
+[Tor.Framework](https://github.com/iCepa/Tor.framework) is the only dependency.
 
 ## Anonymity and Security
-This app and as far as I know its libraries (Tor.Framework) and its dependencies 
+This app and as far as I know its frameworks (Tor.Framework) and their dependencies 
 have not been properly audited, no guarantees thats it is safe to use!
 
 ## Features
