@@ -5,10 +5,11 @@ The point of Tor-Connect is to make running Tor on your Mac and creating/managin
 hidden services for Bitcoin Core easy for anyone. 
 
 ## How to use it?
-- `git clone https://github.com/Fonta1n3/Tor-Connect`
-- `cd Tor-Connect`
-- Double click the Tor-Connect.xcworkspace to launch the app with Xcode.
-- It should "just work".
+- Download the release [here](https://github.com/Fonta1n3/Tor-Connect/releases/tag/v1.0.0-alpha).
+- Open the app, thats it! 
+- In order to connect Fully Noded you need to go to node manager and 
+paste in the hidden service address which you can access from the "Hidden Services" tab in
+Tor-Connect, there is a share and copy button in the top right of Tor-Connect.
 
 ## Dependencies
 [Tor.Framework](https://github.com/iCepa/Tor.framework) is the only dependency.
@@ -25,8 +26,9 @@ have not been properly audited, no guarantees that it is safe, private or anonym
 - Quitting the app quits the Tor process and your hidden services will not be reachable.
 
 ## TODO
+- Find out how low we can go on the minimum supported OS version.
 - App Store release.
-- More fine grained controls for advanced users (run a relay?).
+- More fine grained controls for advanced users (custom rpcports).
 - Full custom torrc into a UI.
 - Fine grained control over hidden services.
 - Show live log.
