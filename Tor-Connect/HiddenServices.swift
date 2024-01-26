@@ -16,12 +16,12 @@ class HiddenServices: NSViewController {
     let regPort = UserDefaults.standard.object(forKey: "regPort") as? String ?? "18443"
     
     @IBOutlet weak var switchNetworkOutlet: NSPopUpButton!
-    @IBOutlet weak var hostLabel: NSTextField!
     @IBOutlet weak var authField: NSTextField!
-    @IBOutlet weak var portLabel: NSTextField!
     @IBOutlet weak var addressLabel: NSTextField!
     @IBOutlet weak var shareButton: NSButton!
     @IBOutlet weak var authorizedClients: NSTextField!
+    @IBOutlet weak var deleteAuthHeader: NSTextField!
+    @IBOutlet weak var deleteAuthButton: NSButton!
     
     
     weak var torMgr = TorClient.sharedInstance
@@ -30,34 +30,70 @@ class HiddenServices: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        //addressLabel.maximumNumberOfLines = 1
-        //hostLabel.maximumNumberOfLines = 1
+        deleteAuthButton.alphaValue = 0
+        deleteAuthHeader.alphaValue = 0
         load()
     }
+    
+    @IBAction func torAuthHelpAction(_ sender: Any) {
+        DispatchQueue.main.async {
+            guard let url = URL(string: "https://community.torproject.org/onion-services/advanced/client-auth/") else { return }
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    @IBAction func deleteAuthClients(_ sender: Any) {
+        var authClientPath = ""
+        let btcMain = "\(torPath())/host/bitcoin/rpc/main/authorized_clients"
+        let btcTest = "\(torPath())/host/bitcoin/rpc/test/authorized_clients"
+        let btcRegtest = "\(torPath())/host/bitcoin/rpc/regtest/authorized_clients"
+        let btcSignet = "\(torPath())/host/bitcoin/rpc/signet/authorized_clients"
+        
+        switch switchNetworkOutlet.indexOfSelectedItem {
+        case 0:
+            authClientPath = btcMain
+        case 1:
+            authClientPath = btcTest
+        case 2:
+            authClientPath = btcSignet
+        case 3:
+            authClientPath = btcRegtest
+        default:
+            break
+        }
+        
+        let fileManager = FileManager.default
+        
+        do {
+            let paths = try fileManager.contentsOfDirectory(atPath: authClientPath)
+            for path in paths
+            {
+                try fileManager.removeItem(atPath: "\(authClientPath)/\(path)")
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
+        load()
+        restartTorAlert()
+    }
+    
+    
     
     func load() {
         guard let hiddenServices = torMgr?.hostnames() else { return }
         switch chain {
         case "main":
             self.switchNetworkOutlet.selectItem(at: 0)
-            hostLabel.stringValue = hiddenServices[0]
-            portLabel.stringValue = mainPort
             addressLabel.stringValue = hiddenServices[0] + ":" + mainPort
-            
         case "test":
             self.switchNetworkOutlet.selectItem(at: 1)
-            hostLabel.stringValue = hiddenServices[1]
-            portLabel.stringValue = testPort
             addressLabel.stringValue = hiddenServices[1] + ":" + testPort
         case "signet":
             self.switchNetworkOutlet.selectItem(at: 2)
-            hostLabel.stringValue = hiddenServices[2]
-            portLabel.stringValue = sigPort
             addressLabel.stringValue = hiddenServices[2] + ":" + sigPort
         case "regtest":
             self.switchNetworkOutlet.selectItem(at: 3)
-            hostLabel.stringValue = hiddenServices[3]
-            portLabel.stringValue = regPort
             addressLabel.stringValue = hiddenServices[3] + ":" + regPort
         default:
             break
@@ -107,25 +143,28 @@ class HiddenServices: NSViewController {
         }
         
         if retrievedPubkey == self.authField.stringValue {
-            DispatchQueue.main.async {
-                let alert = NSAlert()
-                alert.messageText = "Authentication added ✓"
-                alert.informativeText = "Restart Tor-Connect for authentication to come into effect."
-                alert.addButton(withTitle: "OK")
-                alert.alertStyle = .informational
-                let modalResponse = alert.runModal()
-                if modalResponse == NSApplication.ModalResponse.alertFirstButtonReturn {
-                    DispatchQueue.main.async { [weak self] in
-                        guard let self = self else { return }
-                        
-                        self.authField.stringValue = ""
-                        load()
-                    }
-                }
-                
-            }
+            restartTorAlert()
         } else {
             //simpleAlert(message: "Auth key error.", info: "Something went wrong and your auth key was not saved correctly. Please reach out and let us know about this bug.", buttonLabel: "OK")
+        }
+    }
+    
+    
+    private func restartTorAlert() {
+        DispatchQueue.main.async {
+            let alert = NSAlert()
+            alert.messageText = "Done ✓"
+            alert.informativeText = "Restart Tor-Connect for authentication to come into effect."
+            alert.addButton(withTitle: "OK")
+            alert.alertStyle = .informational
+            let modalResponse = alert.runModal()
+            if modalResponse == NSApplication.ModalResponse.alertFirstButtonReturn {
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    self.authField.stringValue = ""
+                    load()
+                }
+            }
         }
     }
     
@@ -199,16 +238,16 @@ class HiddenServices: NSViewController {
         let fileManager = FileManager.default
         guard let dirContents = try? fileManager.contentsOfDirectory(atPath: authClientPath) else { return }
         authorizedClients.stringValue = "\(dirContents.count)"
+        if dirContents.count > 0 {
+            DispatchQueue.main.async { [weak self] in
+                self?.deleteAuthButton.alphaValue = 1.0
+                self?.deleteAuthHeader.alphaValue = 1.0
+            }
+        }
     }
     
     private func torPath() -> String {
         return "\(NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first ?? "")/tor"
-    }
-    
-    private func directoryExistsAtPath(path: String) -> Bool {
-        var isDirectory : ObjCBool = true
-        let exists = FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory)
-        return exists
     }
     
 }
