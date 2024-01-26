@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0493DD45A7FBE652591EF39B /* Pods_Tor_Connect_Tor_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB9167C015D7F0AB70CB311 /* Pods_Tor_Connect_Tor_ConnectUITests.framework */; };
 		0A3696482B62D62500602B18 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 0A3696472B62D62500602B18 /* AppIcon.appiconset */; };
+		0A36964B2B642AD400602B18 /* torconnect_hs.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A3696492B642AD300602B18 /* torconnect_hs.png */; };
+		0A36964C2B642AD400602B18 /* torconnect_status.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A36964A2B642AD400602B18 /* torconnect_status.png */; };
 		0A5371692B60320D00D82B12 /* HiddenServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5371682B60320D00D82B12 /* HiddenServices.swift */; };
 		0A53716D2B618FB500D82B12 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0A53716C2B618FB500D82B12 /* README.md */; };
 		59723E4C2B5AE4AC006CF78A /* Torrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59723E4B2B5AE4AC006CF78A /* Torrc.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		0A3696472B62D62500602B18 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		0A3696492B642AD300602B18 /* torconnect_hs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torconnect_hs.png; sourceTree = "<group>"; };
+		0A36964A2B642AD400602B18 /* torconnect_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torconnect_status.png; sourceTree = "<group>"; };
 		0A5371682B60320D00D82B12 /* HiddenServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenServices.swift; sourceTree = "<group>"; };
 		0A53716C2B618FB500D82B12 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0ACE6C99C69D538497C952FE /* Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-Tor-Connect-Tor-ConnectUITests/Pods-Tor-Connect-Tor-ConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A36964D2B642ADE00602B18 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0A3696492B642AD300602B18 /* torconnect_hs.png */,
+				0A36964A2B642AD400602B18 /* torconnect_status.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		59B6C8F82B59A24D000DDBDE = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 		59B6C9032B59A24D000DDBDE /* Tor-Connect */ = {
 			isa = PBXGroup;
 			children = (
+				0A36964D2B642ADE00602B18 /* Images */,
 				0A3696472B62D62500602B18 /* AppIcon.appiconset */,
 				59723E4B2B5AE4AC006CF78A /* Torrc.swift */,
 				59B6C9042B59A24D000DDBDE /* AppDelegate.swift */,
@@ -288,8 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A36964C2B642AD400602B18 /* torconnect_status.png in Resources */,
 				0A3696482B62D62500602B18 /* AppIcon.appiconset in Resources */,
 				0A53716D2B618FB500D82B12 /* README.md in Resources */,
+				0A36964B2B642AD400602B18 /* torconnect_hs.png in Resources */,
 				59B6C90C2B59A24F000DDBDE /* Assets.xcassets in Resources */,
 				59B6C90F2B59A24F000DDBDE /* Main.storyboard in Resources */,
 			);

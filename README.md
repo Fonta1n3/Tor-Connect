@@ -4,6 +4,10 @@ Tor-Connect is a simple app with which runs the latest stable release of Tor.
 The point of Tor-Connect is to make running Tor on your Mac and creating/managing 
 hidden services for Bitcoin Core easy for anyone. 
 
+<img src="./Tor-Connect/Images/torconnect_status.png" alt="" width="100"/>
+<br>
+<img src="./Tor-Connect/Images/torconnect_hs.png" alt="" width="100"/>
+
 ## How to use it?
 - `git clone https://github.com/Fonta1n3/Tor-Connect`
 - `cd Tor-Connect`
