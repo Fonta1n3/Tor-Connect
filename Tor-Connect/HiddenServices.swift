@@ -9,7 +9,7 @@ import Cocoa
 
 class HiddenServices: NSViewController {
     
-    let chain = UserDefaults.standard.object(forKey: "chain") as? String ?? "main"
+    var chain = UserDefaults.standard.object(forKey: "chain") as? String ?? "main"
     let mainPort = UserDefaults.standard.object(forKey: "mainPort") as? String ?? "8332"
     let testPort = UserDefaults.standard.object(forKey: "testPort") as? String ?? "18332"
     let sigPort = UserDefaults.standard.object(forKey: "sigPort") as? String ?? "38332"
@@ -188,20 +188,17 @@ class HiddenServices: NSViewController {
     @IBAction func switchNetworkAction(_ sender: Any) {
         switch switchNetworkOutlet.indexOfSelectedItem {
         case 0:
-            print("main")
             UserDefaults.standard.setValue("main", forKey: "chain")
         case 1:
-            print("test")
             UserDefaults.standard.setValue("test", forKey: "chain")
         case 2:
-            print("signet")
             UserDefaults.standard.setValue("signet", forKey: "chain")
         case 3:
-            print("regtest")
             UserDefaults.standard.setValue("regtest", forKey: "chain")
         default:
             break
         }
+        chain = UserDefaults.standard.value(forKey: "chain") as? String ?? "main"
         load()
     }
     

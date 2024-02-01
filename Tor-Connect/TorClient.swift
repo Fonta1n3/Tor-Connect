@@ -268,8 +268,6 @@ class TorClient: NSObject, URLSessionDelegate {
                 print("Directory previously created.")
             }
         }
-        
-        
     }
     
     func hostnames() -> [String]? {
