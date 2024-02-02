@@ -278,15 +278,6 @@ class Torrc {
     """
     
     class func torPath() -> String {
-        print("torpath from torrc: \("\(NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first ?? "")/tor")")
-        #if targetEnvironment(simulator)
-        let path = NSSearchPathForDirectoriesInDomains(.applicationDirectory, .userDomainMask, true).first ?? ""
-        return "\(path.split(separator: Character("/"))[0..<2].joined(separator: "/"))/.tor_tmp"
-        
-        #else
         return "\(NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first ?? "")/tor"
-        
-        #endif
-        
     }
 }
