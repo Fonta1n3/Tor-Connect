@@ -11,7 +11,12 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     
-
+    @IBAction func newMenuItemClicked(_ sender: Any) {
+        for window in NSApp.windows {
+                window.deminiaturize(nil)
+        }
+    }
+    
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
