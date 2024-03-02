@@ -27,7 +27,6 @@ Tor-Connect, there is a share and copy button in the top right of Tor-Connect.
 
 ## TODO
 - Find out how low we can go on the minimum supported OS version.
-- App Store release.
 - More fine grained controls for advanced users (custom rpcports).
 - Full custom torrc into a UI.
 - Fine grained control over hidden services.
