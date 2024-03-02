@@ -18,10 +18,6 @@ Tor-Connect, there is a share and copy button in the top right of Tor-Connect.
 ## Dependencies
 [Tor.Framework](https://github.com/iCepa/Tor.framework) is the only dependency.
 
-## Anonymity and Security
-This app and as far as I know its frameworks (Tor.Framework) and their dependencies 
-have not been properly audited, no guarantees that it is safe, private or anonymous to use!
-
 ## Features
 - Creates hidden services for Bitcoin Core mainnet, testnet, signet and regtest default rpcports.
 - Allows you to add `authorized_clients` utilizing Tor V3 authentication.
