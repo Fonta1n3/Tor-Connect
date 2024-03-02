@@ -1,4 +1,4 @@
-#  Tor-Connect Alpha
+#  Tor-Connect Beta
 
 Tor-Connect is a simple app with which runs the latest stable release of Tor.
 The point of Tor-Connect is to make running Tor on your Mac and creating/managing 
