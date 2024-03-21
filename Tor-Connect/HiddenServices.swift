@@ -22,6 +22,7 @@ class HiddenServices: NSViewController {
     @IBOutlet weak var authorizedClients: NSTextField!
     @IBOutlet weak var deleteAuthHeader: NSTextField!
     @IBOutlet weak var deleteAuthButton: NSButton!
+    @IBOutlet weak var userNameField: NSTextField!
     
     
     weak var torMgr = TorClient.sharedInstance
@@ -123,7 +124,12 @@ class HiddenServices: NSViewController {
         }
         
         let fileManager = FileManager.default
-        let filename = "Tor-Connect"// get a username from the user instead
+        let filename = userNameField.stringValue
+        
+        guard filename != "" else {
+            addUserNameAlert()
+            return
+        }
         let pubkey = self.authField.stringValue.data(using: .utf8)
         
         do {
@@ -135,6 +141,7 @@ class HiddenServices: NSViewController {
         }
         
         fileManager.createFile(atPath: "\(authClientPath)/\(filename).auth", contents: pubkey, attributes: [FileAttributeKey.posixPermissions: 0o700])
+        
         
         guard let data = fileManager.contents(atPath: "\(authClientPath)/\(filename).auth"),
                 let retrievedPubkey = String(data: data, encoding: .utf8) else {
@@ -150,6 +157,12 @@ class HiddenServices: NSViewController {
     }
     
     
+    private func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
+      }
+    
+    
     private func restartTorAlert() {
         DispatchQueue.main.async {
             let alert = NSAlert()
@@ -162,6 +175,24 @@ class HiddenServices: NSViewController {
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
                     self.authField.stringValue = ""
+                    self.userNameField.stringValue = ""
+                    load()
+                }
+            }
+        }
+    }
+    
+    private func addUserNameAlert() {
+        DispatchQueue.main.async {
+            let alert = NSAlert()
+            alert.messageText = "Unique username required."
+            alert.informativeText = "Please add a unique username for each authorized client to avoid overwriting authorized clients."
+            alert.addButton(withTitle: "OK")
+            alert.alertStyle = .informational
+            let modalResponse = alert.runModal()
+            if modalResponse == NSApplication.ModalResponse.alertFirstButtonReturn {
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
                     load()
                 }
             }

@@ -925,33 +925,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zn7-Lz-FHu">
-                                <rect key="frame" x="30" y="224" width="177" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Delete All Authorized Clients" id="b2F-m0-8Qg">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-eX-6rV">
-                                <rect key="frame" x="32" y="269" width="484" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="484" id="kBl-mg-Th5"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="descriptor:x25519:WVATZT4ZLOESCWQLE26CMNUB5RL255UJB5QCNDZW3BP5O5ZX2QWQ" drawsBackground="YES" id="xcs-6x-AK7">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dqy-4z-mpe">
-                                <rect key="frame" x="30" y="248" width="371" height="13"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="The authorized client should be in &quot;descriptor:x25519:&lt;public key&gt;&quot; format." id="lWZ-UX-iVf">
-                                    <font key="font" metaFont="system" size="10"/>
-                                    <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jEV-3W-03j">
                                 <rect key="frame" x="170" y="292" width="25" height="25"/>
                                 <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dNQ-R4-Rec">
@@ -962,20 +935,8 @@
                                     <action selector="torAuthHelpAction:" target="Ifm-bY-1Jg" id="MIt-Jn-0Mg"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xye-Rm-N44">
-                                <rect key="frame" x="25" y="189" width="74" height="32"/>
-                                <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fX9-9p-eIB">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                                <color key="contentTintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                                <connections>
-                                    <action selector="deleteAuthClients:" target="Ifm-bY-1Jg" id="ekA-CW-xN9"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beC-3E-aTd">
-                                <rect key="frame" x="524" y="252" width="35" height="19"/>
+                                <rect key="frame" x="524" y="239" width="35" height="19"/>
                                 <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="NSAddTemplate" imagePosition="overlaps" borderStyle="border" inset="2" id="iUR-nN-pN2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -1004,12 +965,62 @@
                                     <action selector="copyAddressAction:" target="Ifm-bY-1Jg" id="kWq-Bq-hPc"/>
                                 </connections>
                             </button>
+                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Ay-xO-61w">
+                                <rect key="frame" x="32" y="269" width="484" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="a unique username" drawsBackground="YES" id="u9r-0k-LP3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zn7-Lz-FHu">
+                                <rect key="frame" x="30" y="195" width="177" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Delete All Authorized Clients" id="b2F-m0-8Qg">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-eX-6rV">
+                                <rect key="frame" x="32" y="240" width="484" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="484" id="kBl-mg-Th5"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="descriptor:x25519:WVATZT4ZLOESCWQLE26CMNUB5RL255UJB5QCNDZW3BP5O5ZX2QWQ" drawsBackground="YES" id="xcs-6x-AK7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dqy-4z-mpe">
+                                <rect key="frame" x="30" y="219" width="371" height="13"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="The authorized client should be in &quot;descriptor:x25519:&lt;public key&gt;&quot; format." id="lWZ-UX-iVf">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xye-Rm-N44">
+                                <rect key="frame" x="25" y="160" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fX9-9p-eIB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <color key="contentTintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="deleteAuthClients:" target="Ifm-bY-1Jg" id="ekA-CW-xN9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Rpf-2h-hum" secondAttribute="trailing" constant="77" id="0Pw-gV-vCo"/>
+                            <constraint firstItem="5Ay-xO-61w" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="0aF-YN-Bb9"/>
                             <constraint firstItem="awc-y2-Czg" firstAttribute="top" secondItem="Qln-aa-FSL" secondAttribute="bottom" constant="8" id="0dT-Sj-MKf"/>
                             <constraint firstItem="beC-3E-aTd" firstAttribute="centerY" secondItem="9yP-eX-6rV" secondAttribute="centerY" constant="1.5" id="2MI-Im-3U0"/>
                             <constraint firstItem="9yP-eX-6rV" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="6Nh-Xh-epl"/>
+                            <constraint firstItem="9yP-eX-6rV" firstAttribute="width" secondItem="5Ay-xO-61w" secondAttribute="width" id="6fd-O4-dVt"/>
+                            <constraint firstItem="5Ay-xO-61w" firstAttribute="top" secondItem="4UA-TB-KT5" secondAttribute="bottom" constant="8" symbolic="YES" id="9Fp-TN-hpS"/>
                             <constraint firstItem="zn7-Lz-FHu" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="D0Q-JT-Snh"/>
                             <constraint firstItem="4UA-TB-KT5" firstAttribute="top" secondItem="awc-y2-Czg" secondAttribute="bottom" constant="8" id="DFi-vb-FHf"/>
                             <constraint firstItem="Qln-aa-FSL" firstAttribute="top" secondItem="3gI-y2-wEi" secondAttribute="top" constant="20" symbolic="YES" id="HNp-cZ-HcT"/>
@@ -1021,8 +1032,8 @@
                             <constraint firstItem="dqy-4z-mpe" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="Wi0-nv-ei9"/>
                             <constraint firstAttribute="trailing" secondItem="awc-y2-Czg" secondAttribute="trailing" constant="32" id="Wxb-sQ-jlk"/>
                             <constraint firstItem="beC-3E-aTd" firstAttribute="leading" secondItem="9yP-eX-6rV" secondAttribute="trailing" constant="8" id="bwu-W5-BW9"/>
-                            <constraint firstItem="9yP-eX-6rV" firstAttribute="top" secondItem="4UA-TB-KT5" secondAttribute="bottom" constant="8" symbolic="YES" id="eem-kX-gdq"/>
                             <constraint firstItem="jEV-3W-03j" firstAttribute="leading" secondItem="4UA-TB-KT5" secondAttribute="trailing" constant="8" symbolic="YES" id="iNq-cJ-Mf7"/>
+                            <constraint firstItem="9yP-eX-6rV" firstAttribute="top" secondItem="5Ay-xO-61w" secondAttribute="bottom" constant="8" id="jPN-e2-MrH"/>
                             <constraint firstItem="Xye-Rm-N44" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="p3Z-D3-4ir"/>
                             <constraint firstItem="Xye-Rm-N44" firstAttribute="top" secondItem="zn7-Lz-FHu" secondAttribute="bottom" constant="8" id="u2W-Ru-1cv"/>
                             <constraint firstItem="4UA-TB-KT5" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="vNv-XU-ZoM"/>
@@ -1037,6 +1048,7 @@
                         <outlet property="deleteAuthHeader" destination="zn7-Lz-FHu" id="MU4-vb-AR6"/>
                         <outlet property="shareButton" destination="Qln-aa-FSL" id="w7d-in-k3S"/>
                         <outlet property="switchNetworkOutlet" destination="Quh-tV-kg8" id="fHG-vP-Si4"/>
+                        <outlet property="userNameField" destination="5Ay-xO-61w" id="rf5-qT-KRH"/>
                     </connections>
                 </viewController>
                 <customObject id="zbo-zo-K23" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
