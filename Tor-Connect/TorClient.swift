@@ -46,7 +46,7 @@ class TorClient: NSObject, URLSessionDelegate {
         weak var weakDelegate = delegate
         state = .started
         guard let proxyPort = try? reservePort() else { return }
-        guard let dnsPort = try? reservePort() else { return }
+        //guard let dnsPort = try? reservePort() else { return }
         
         sessionConfiguration.connectionProxyDictionary = [kCFProxyTypeKey: kCFProxyTypeSOCKS,
                                           kCFStreamPropertySOCKSProxyHost: "localhost",
@@ -61,7 +61,7 @@ class TorClient: NSObject, URLSessionDelegate {
         self.thread = nil
         
         self.config.options = [
-            "DNSPort": "\(dnsPort)",
+            //"DNSPort": "\(dnsPort)",
             "AutomapHostsOnResolve": "1",
             "SocksPort": "\(proxyPort) OnionTrafficOnly",
             "AvoidDiskWrites": "1",

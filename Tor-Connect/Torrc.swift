@@ -82,9 +82,9 @@ class Torrc {
     ## address y:z.
 
 
-    HiddenServiceDir \(torPath())/host/joinmarket/
-    HiddenServiceVersion 3
-    HiddenServicePort 28183 127.0.0.1:28183
+    #HiddenServiceDir \(torPath())/host/joinmarket/
+    #HiddenServiceVersion 3
+    #HiddenServicePort 28183 127.0.0.1:28183
 
     HiddenServiceDir \(torPath())/host/bitcoin/rpc/main/
     HiddenServiceVersion 3

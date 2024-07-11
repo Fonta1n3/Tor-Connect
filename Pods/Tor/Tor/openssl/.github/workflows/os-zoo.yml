@@ -1,4 +1,4 @@
-# Copyright 2021-2023 The OpenSSL Project Authors. All Rights Reserved.
+# Copyright 2021-2024 The OpenSSL Project Authors. All Rights Reserved.
 #
 # Licensed under the Apache License 2.0 (the "License").  You may not use
 # this file except in compliance with the License.  You can obtain a copy
@@ -105,7 +105,7 @@ jobs:
       fail-fast: false
       matrix:
         branch: [openssl-3.0, openssl-3.1, master]
-        os: [macos-11, macos-12, macos-13]
+        os: [macos-11, macos-12, macos-13, macos-14]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v4
@@ -141,7 +141,6 @@ jobs:
       run: git submodule update --init --depth 1 fuzz/corpora
     - uses: ilammy/msvc-dev-cmd@v1
     - uses: ilammy/setup-nasm@v1
-    - uses: shogo82148/actions-setup-perl@v1
     - name: prepare the build directory
       run: mkdir _build
     - name: config
@@ -154,7 +153,7 @@ jobs:
       working-directory: _build
       run: nmake /S
     - name: download coreinfo
-      uses: suisei-cn/actions-download-file@v1.4.0
+      uses: suisei-cn/actions-download-file@v1.6.0
       with:
         url: "https://download.sysinternals.com/files/Coreinfo.zip"
         target: _build/coreinfo/
@@ -167,3 +166,22 @@ jobs:
     - name: test
       working-directory: _build
       run: nmake test VERBOSE_FAILURE=yes HARNESS_JOBS=4
+
+  self-hosted:
+    strategy:
+      matrix:
+        os: [freebsd-13.2, ubuntu-arm64-22.04]
+    runs-on: ${{ matrix.os }}-self-hosted
+    continue-on-error: true
+    steps:
+    - uses: actions/checkout@v4
+    - name: config
+      run: ./config enable-fips enable-ec_nistp_64_gcc_128 enable-md2 enable-rc5 enable-ssl3 enable-ssl3-method enable-trace
+    - name: config dump
+      run: ./configdata.pm --dump
+    - name: make
+      run: make -j4
+    - name: get cpu info
+      run: ./util/opensslwrap.sh version -c
+    - name: make test
+      run: make test HARNESS_JOBS=${HARNESS_JOBS:-4}

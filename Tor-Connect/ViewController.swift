@@ -58,7 +58,7 @@ extension ViewController: OnionManagerDelegate {
             guard let self = self else { return }
             switch torMgr?.state {
             case .connected:
-                statusLabel.stringValue = "Tor v0.4.8.10 connected ✓"
+                statusLabel.stringValue = "Tor v0.4.8.11 connected ✓"
                 statusImage.contentTintColor = .green
                 if torMgr?.hostnames() != nil {
                     hiddenServicesLabel.stringValue = "Hidden services active ✓"
