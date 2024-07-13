@@ -832,11 +832,11 @@
             <objects>
                 <viewController title="Hidden Services" id="Ifm-bY-1Jg" customClass="HiddenServices" customModule="Tor_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="3gI-y2-wEi">
-                        <rect key="frame" x="0.0" y="0.0" width="593" height="494"/>
+                        <rect key="frame" x="0.0" y="0.0" width="625" height="494"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fillProportionally" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="awc-y2-Czg">
-                                <rect key="frame" x="32" y="322" width="529" height="126"/>
+                                <rect key="frame" x="32" y="322" width="561" height="126"/>
                                 <subviews>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kS9-pm-wlr">
                                         <rect key="frame" x="-2" y="110" width="55" height="16"/>
@@ -935,18 +935,8 @@
                                     <action selector="torAuthHelpAction:" target="Ifm-bY-1Jg" id="MIt-Jn-0Mg"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beC-3E-aTd">
-                                <rect key="frame" x="524" y="239" width="35" height="19"/>
-                                <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="NSAddTemplate" imagePosition="overlaps" borderStyle="border" inset="2" id="iUR-nN-pN2">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                    <font key="font" metaFont="systemBold" size="12"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="saveAuthAction:" target="Ifm-bY-1Jg" id="Szf-dz-HOk"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qln-aa-FSL">
-                                <rect key="frame" x="535" y="455" width="24" height="19"/>
+                                <rect key="frame" x="567" y="455" width="24" height="19"/>
                                 <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="square.and.arrow.up" catalog="system" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MCe-oc-RG4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -956,7 +946,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rpf-2h-hum">
-                                <rect key="frame" x="490" y="455" width="26" height="19"/>
+                                <rect key="frame" x="522" y="455" width="26" height="19"/>
                                 <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="doc.on.doc" catalog="system" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="C1X-2n-BaW">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -974,7 +964,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zn7-Lz-FHu">
-                                <rect key="frame" x="30" y="195" width="177" height="16"/>
+                                <rect key="frame" x="30" y="167" width="177" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Delete All Authorized Clients" id="b2F-m0-8Qg">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -1001,7 +991,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xye-Rm-N44">
-                                <rect key="frame" x="25" y="160" width="74" height="32"/>
+                                <rect key="frame" x="25" y="132" width="74" height="32"/>
                                 <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fX9-9p-eIB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1012,29 +1002,39 @@
                                     <action selector="deleteAuthClients:" target="Ifm-bY-1Jg" id="ekA-CW-xN9"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="beC-3E-aTd">
+                                <rect key="frame" x="25" y="184" width="64" height="32"/>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="iUR-nN-pN2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveAuthAction:" target="Ifm-bY-1Jg" id="Szf-dz-HOk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Rpf-2h-hum" secondAttribute="trailing" constant="77" id="0Pw-gV-vCo"/>
                             <constraint firstItem="5Ay-xO-61w" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="0aF-YN-Bb9"/>
                             <constraint firstItem="awc-y2-Czg" firstAttribute="top" secondItem="Qln-aa-FSL" secondAttribute="bottom" constant="8" id="0dT-Sj-MKf"/>
-                            <constraint firstItem="beC-3E-aTd" firstAttribute="centerY" secondItem="9yP-eX-6rV" secondAttribute="centerY" constant="1.5" id="2MI-Im-3U0"/>
                             <constraint firstItem="9yP-eX-6rV" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="6Nh-Xh-epl"/>
                             <constraint firstItem="9yP-eX-6rV" firstAttribute="width" secondItem="5Ay-xO-61w" secondAttribute="width" id="6fd-O4-dVt"/>
                             <constraint firstItem="5Ay-xO-61w" firstAttribute="top" secondItem="4UA-TB-KT5" secondAttribute="bottom" constant="8" symbolic="YES" id="9Fp-TN-hpS"/>
+                            <constraint firstItem="zn7-Lz-FHu" firstAttribute="top" secondItem="beC-3E-aTd" secondAttribute="bottom" constant="8" id="AYL-Oc-0iy"/>
+                            <constraint firstItem="beC-3E-aTd" firstAttribute="top" secondItem="dqy-4z-mpe" secondAttribute="bottom" constant="8" id="Afb-Fo-bi1"/>
                             <constraint firstItem="zn7-Lz-FHu" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="D0Q-JT-Snh"/>
                             <constraint firstItem="4UA-TB-KT5" firstAttribute="top" secondItem="awc-y2-Czg" secondAttribute="bottom" constant="8" id="DFi-vb-FHf"/>
                             <constraint firstItem="Qln-aa-FSL" firstAttribute="top" secondItem="3gI-y2-wEi" secondAttribute="top" constant="20" symbolic="YES" id="HNp-cZ-HcT"/>
                             <constraint firstItem="jEV-3W-03j" firstAttribute="centerY" secondItem="4UA-TB-KT5" secondAttribute="centerY" id="HO6-mr-qKI"/>
-                            <constraint firstItem="zn7-Lz-FHu" firstAttribute="top" secondItem="dqy-4z-mpe" secondAttribute="bottom" constant="8" symbolic="YES" id="MT9-Zl-K7N"/>
                             <constraint firstItem="awc-y2-Czg" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="R4b-YH-h85"/>
                             <constraint firstItem="dqy-4z-mpe" firstAttribute="top" secondItem="9yP-eX-6rV" secondAttribute="bottom" constant="8" symbolic="YES" id="TzW-vR-URt"/>
                             <constraint firstItem="Rpf-2h-hum" firstAttribute="top" secondItem="3gI-y2-wEi" secondAttribute="top" constant="20" symbolic="YES" id="WBq-4P-W8o"/>
                             <constraint firstItem="dqy-4z-mpe" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="Wi0-nv-ei9"/>
                             <constraint firstAttribute="trailing" secondItem="awc-y2-Czg" secondAttribute="trailing" constant="32" id="Wxb-sQ-jlk"/>
-                            <constraint firstItem="beC-3E-aTd" firstAttribute="leading" secondItem="9yP-eX-6rV" secondAttribute="trailing" constant="8" id="bwu-W5-BW9"/>
                             <constraint firstItem="jEV-3W-03j" firstAttribute="leading" secondItem="4UA-TB-KT5" secondAttribute="trailing" constant="8" symbolic="YES" id="iNq-cJ-Mf7"/>
                             <constraint firstItem="9yP-eX-6rV" firstAttribute="top" secondItem="5Ay-xO-61w" secondAttribute="bottom" constant="8" id="jPN-e2-MrH"/>
                             <constraint firstItem="Xye-Rm-N44" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="p3Z-D3-4ir"/>
+                            <constraint firstItem="beC-3E-aTd" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="sHO-T0-u8q"/>
                             <constraint firstItem="Xye-Rm-N44" firstAttribute="top" secondItem="zn7-Lz-FHu" secondAttribute="bottom" constant="8" id="u2W-Ru-1cv"/>
                             <constraint firstItem="4UA-TB-KT5" firstAttribute="leading" secondItem="3gI-y2-wEi" secondAttribute="leading" constant="32" id="vNv-XU-ZoM"/>
                             <constraint firstAttribute="trailing" secondItem="Qln-aa-FSL" secondAttribute="trailing" constant="34" id="xjD-vR-A4U"/>
@@ -1053,11 +1053,10 @@
                 </viewController>
                 <customObject id="zbo-zo-K23" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917.5" y="975"/>
+            <point key="canvasLocation" x="933.5" y="975"/>
         </scene>
     </scenes>
     <resources>
-        <image name="NSAddTemplate" width="18" height="17"/>
         <image name="circle.fill" catalog="system" width="15" height="15"/>
         <image name="doc.on.doc" catalog="system" width="16" height="18"/>
         <image name="popUpButtonCell:t6b-1S-50R:image" width="1" height="1">

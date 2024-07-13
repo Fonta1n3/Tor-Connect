@@ -202,6 +202,9 @@ class HiddenServices: NSViewController {
     @IBAction func copyAddressAction(_ sender: Any) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
+            print("addressLabel.stringValue: \(addressLabel.stringValue)")
+            //NSPasteboard.general.setString(addressLabel.stringValue, forType: .string)
+            NSPasteboard.general.clearContents()
             NSPasteboard.general.setString(addressLabel.stringValue, forType: .string)
             dialogOK(question: "Copied ✓", text: "Paste this string into Fully Noded to connect via Tor.")
         }
